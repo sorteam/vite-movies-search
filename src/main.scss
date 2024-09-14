@@ -1,0 +1,113 @@
+// Import Bootstrap's SCSS variables and functions
+@import "../node_modules/bootstrap/scss/functions";
+
+// Override Bootstrap's default variables
+$primary: #720ac4; // Example custom primary color
+
+// Import Bootstrap's SCSS components after overriding variables
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: black;
+  overflow: hidden;
+}
+
+#root {
+  overflow: auto;
+}
+
+.star-sky {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #150223, #8416a5, #ca5096, #e8b458, #f3c878);
+  background-size: cover;
+  overflow: hidden;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+/* Moving and twinkling stars */
+.stars-1 {
+  background: transparent;
+  box-shadow: 50px 60px #ffd700, 200px 150px #ffd700, 350px 300px #ffd700,
+    600px 400px #ffd700, 750px 500px #ffd700, 1000px 250px #ffd700,
+    1200px 100px #ffd700, 1450px 550px #ffd700, 1700px 50px #ffd700,
+    1900px 200px #ffd700, 2000px 450px #ffd700, 2200px 150px #ffd700;
+  animation: twinkling 2s infinite ease-in-out alternate,
+    moveStars 50s linear infinite;
+}
+
+.stars-2 {
+  background: transparent;
+  box-shadow: 40px 40px #ffd700, 180px 190px #ffd700, 320px 350px #ffd700,
+    580px 410px #ffd700, 730px 560px #ffd700, 980px 230px #ffd700,
+    1180px 180px #ffd700, 1430px 580px #ffd700, 1650px 100px #ffd700,
+    1850px 270px #ffd700, 1980px 490px #ffd700, 2100px 210px #ffd700;
+  animation: twinkling 3s infinite ease-in-out alternate,
+    moveStars 60s linear infinite;
+}
+
+.stars-3 {
+  background: transparent;
+  box-shadow: 70px 90px #ffd700, 250px 210px #ffd700, 380px 320px #ffd700,
+    650px 450px #ffd700, 840px 520px #ffd700, 1090px 300px #ffd700,
+    1290px 180px #ffd700, 1550px 610px #ffd700, 1800px 70px #ffd700,
+    1950px 320px #ffd700, 2100px 520px #ffd700, 2250px 180px #ffd700;
+  animation: twinkling 4s infinite ease-in-out alternate,
+    moveStars 70s linear infinite;
+}
+
+/* Star twinkling effect */
+@keyframes twinkling {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Move the stars from top to bottom */
+@keyframes moveStars {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Make the stars larger and yellow */
+.stars-1,
+.stars-2,
+.stars-3 {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+
+.stars-1 {
+  width: 6px;
+  height: 6px;
+}
+
+.stars-2 {
+  width: 5px;
+  height: 5px;
+}
+
+.stars-3 {
+  width: 4px;
+  height: 4px;
+}

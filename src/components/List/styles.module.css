@@ -1,0 +1,6 @@
+.ListItem:hover {
+  cursor: pointer;
+  border-color: #b985e2;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(114, 10, 196, 0.25);
+}

@@ -1,0 +1,21 @@
+@media screen and (min-width: 0) {
+  .Drawer + :global(.offcanvas) {
+    width: 100% !important;
+  }
+}
+
+@media screen and (min-width: 767.98px) {
+  .Drawer + :global(.offcanvas) {
+    width: 600px !important;
+  }
+}
+
+.Drawer {
+  background-color: #90909090 !important;
+  opacity: 1 !important;
+  backdrop-filter: blur(8px);
+}
+
+:global(.offcanvas) {
+  box-shadow: var(--bs-box-shadow);
+}
